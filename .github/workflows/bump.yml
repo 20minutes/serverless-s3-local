@@ -56,11 +56,17 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.rest.pulls.create({
+            const result = await github.rest.pulls.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: 'chore(*): bump ' + process.env.VERSION,
               head: context.repo.owner + ':' + 'bump-' + process.env.VERSION,
               base: process.env.BRANCH,
-              body: ''
-            })
+              body: 'Prepare release ' + process.env.VERSION
+            });
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: result.data.number,
+              labels: ['Ready For Review']
+            });
