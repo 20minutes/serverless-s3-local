@@ -1,5 +1,5 @@
 {
-    "name": "serverless-s3-local",
+    "name": "@20minutes/serverless-s3-local",
     "version": "0.7.2",
     "author": "Masahiro Wada",
     "main": "index.js",
@@ -8,7 +8,7 @@
         "fs-extra": "^11.0.0",
         "rxjs": "^6.6.7",
         "rxjs-compat": "^6.6.7",
-        "s3rver": "20minutes/s3rver",
+        "s3rver": "20minutes/s3rver#main",
         "serverless-offline": "^12.0.0",
         "shelljs": "^0.8.5"
     },
@@ -23,7 +23,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ar90n/serverless-s3-local.git"
+        "url": "git+https://github.com/20minutes/serverless-s3-local.git"
     },
     "keywords": [
         "serverless",
@@ -32,7 +32,7 @@
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/ar90n/serverless-s3-local/issues"
+        "url": "https://github.com/20minutes/serverless-s3-local/issues"
     },
-    "homepage": "https://github.com/ar90n/serverless-s3-local#readme"
+    "homepage": "https://github.com/20minutes/serverless-s3-local#readme"
 }
