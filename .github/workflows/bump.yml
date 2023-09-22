@@ -16,43 +16,44 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
       - name: Switch branch
         run: git switch -c tmp
+
       - name: Git config
         run: |
           git config --local user.email "machineuser+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+
       - name: Get branch
         id: get_branch
-        run: echo ::set-output name=BRANCH::${GITHUB_REF/refs\/heads\//}
+        run: echo "BRANCH=${GITHUB_REF/refs\/heads\//}" >> "$GITHUB_ENV"
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+
       - name: Bump version
         id: bump_version
         run: |
-          pushd  serverless-s3-local
-          version=$(npm version ${{ github.event.inputs.bumpTarget }})
-          echo ::set-output name=VERSION::${version}
+          pushd serverless-s3-local
+          yarn version --${{ github.event.inputs.bumpTarget }} --no-git-tag-version
+          jq -r '"VERSION=v\(.version)"' package.json >> "$GITHUB_ENV"
           popd
+
       - name: Commit pyproject.toml
         id: commit_pyproject_toml
         run: |
           git add serverless-s3-local/package.json
           git commit -m "chore(*): bump version to ${VERSION}"
-        env:
-          VERSION: ${{ steps.bump_version.outputs.VERSION }}
+
       - name: Push branch
         run: |
           git branch -m bump-${VERSION}
           git push -u origin bump-${VERSION}
-        env:
-          VERSION: ${{ steps.bump_version.outputs.VERSION }}
+
       - name: Create pull request
         uses: actions/github-script@v6
-        env:
-          BRANCH: ${{ steps.get_branch.outputs.BRANCH }}
-          VERSION: ${{ steps.bump_version.outputs.VERSION }}
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
