@@ -1,9 +1,9 @@
 service: serverless-s3-local-example
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs18.x
 plugins:
-  - serverless-s3-local
+  - "@20minutes/serverless-s3-local"
   - serverless-offline
 custom:
   # Uncomment only if you want to collaborate with serverless-plugin-additional-stacks
