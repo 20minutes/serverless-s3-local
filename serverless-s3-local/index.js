@@ -1,4 +1,4 @@
-const S3rver = require("s3rver");
+const S3rver = require("@20minutes/s3rver");
 const fs = require("fs-extra"); // Using fs-extra to ensure destination directory exist
 const shell = require("shelljs");
 const path = require("path");
