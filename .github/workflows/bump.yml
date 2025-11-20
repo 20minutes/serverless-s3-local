@@ -13,7 +13,7 @@ jobs:
   bump:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -29,7 +29,7 @@ jobs:
         id: get_branch
         run: echo "BRANCH=${GITHUB_REF/refs\/heads\//}" >> "$GITHUB_ENV"
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v6
         with:
           node-version: 18
 
@@ -53,7 +53,7 @@ jobs:
           git push -u origin bump-${VERSION}
 
       - name: Create pull request
-        uses: actions/github-script@v6
+        uses: actions/github-script@v8
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
