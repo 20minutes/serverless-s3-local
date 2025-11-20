@@ -15,19 +15,19 @@ jobs:
 
       - name: test put-with-s3-event-response
         shell: bash
-        run: docker-compose -f ./test/docker-compose.yml run put-with-s3-event-response
+        run: docker compose -f ./test/docker-compose.yml run put-with-s3-event-response
       - name: test resize-image
         shell: bash
-        run: docker-compose -f ./test/docker-compose.yml run resize-image
+        run: docker compose -f ./test/docker-compose.yml run resize-image
       - name: test simple-event
         shell: bash
-        run: docker-compose -f ./test/docker-compose.yml run simple-event
+        run: docker compose -f ./test/docker-compose.yml run simple-event
       - name: test simple-event-python
         shell: bash
-        run: docker-compose -f ./test/docker-compose.yml run simple-event-python
+        run: docker compose -f ./test/docker-compose.yml run simple-event-python
       - name: test simple-put
         shell: bash
-        run: docker-compose -f ./test/docker-compose.yml run simple-put
+        run: docker compose -f ./test/docker-compose.yml run simple-put
       - name: test webpack-support
         shell: bash
-        run: docker-compose -f ./test/docker-compose.yml run webpack-support
+        run: docker compose -f ./test/docker-compose.yml run webpack-support
