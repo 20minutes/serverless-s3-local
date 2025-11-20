@@ -1,7 +1,5 @@
-version: '3.4'
-
 x-template: &example-template
-    image: node
+    image: node:22
     volumes:
       - ../:/serverless-s3-local:cached
       - work:/work

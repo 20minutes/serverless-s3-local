@@ -9,7 +9,7 @@
         "eslint-plugin-import": "2.32.0",
         "got": "12.6.1",
         "jest": "30.2.0",
-        "serverless": "3.35.2"
+        "osls": "3.59.3"
     },
     "workspaces": [
         "serverless-s3-local",
