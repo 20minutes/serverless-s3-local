@@ -12,7 +12,7 @@ For the official readme, [check the official project](https://github.com/ar90n/s
 ## Requirements
 
 - Node.js >= 24
-- Serverless Framework
+- Serverless Framework v3 or osls v3
 - `serverless-offline` when using S3 events with offline lambdas
 
 ## Installation
@@ -72,21 +72,23 @@ serverless offline start
 
 Common `custom.s3` options:
 
-- `host`: S3 endpoint host used by SDK clients. Default: `localhost`
-- `address`: bind address used by S3rver. Default: `localhost`
-- `port`: S3 endpoint port. Default: `4569`
-- `directory`: local object storage directory. Default: `./buckets`
-- `buckets`: extra buckets to create
-- `noStart`: create/remove buckets against already running local S3
-- `accessKeyId`: local credentials. Default: `S3RVER`
-- `secretAccessKey`: local credentials. Default: `S3RVER`
-- `region`: SDK region. Default: `us-east-1`
-- `cors`: path to CORS XML config
-- `website`: path to website XML config
-- `allowMismatchedSignatures`: pass-through S3rver option
-- `serviceEndpoint`: pass-through S3rver option
-- `httpsProtocol`: directory containing `cert.pem` and `key.pem`
-- `vhostBuckets`: pass-through S3rver option
+| Option | Description | Default |
+| --- | --- | --- |
+| `host` | S3 endpoint host used by SDK clients | `localhost` |
+| `address` | Bind address used by S3rver | `localhost` |
+| `port` | S3 endpoint port | `4569` |
+| `directory` | Local object storage directory | `./buckets` |
+| `buckets` | Extra buckets to create | none |
+| `noStart` | Create/remove buckets against already running local S3 | `false` |
+| `accessKeyId` | Local credentials access key | `S3RVER` |
+| `secretAccessKey` | Local credentials secret key | `S3RVER` |
+| `region` | SDK region | `us-east-1` |
+| `cors` | Path to CORS XML config | none |
+| `website` | Path to website XML config | none |
+| `allowMismatchedSignatures` | Pass-through S3rver option | `false` |
+| `serviceEndpoint` | Pass-through S3rver option | none |
+| `httpsProtocol` | Directory containing `cert.pem` and `key.pem` | none |
+| `vhostBuckets` | Pass-through S3rver option | `true` |
 
 ## SDK Client
 
