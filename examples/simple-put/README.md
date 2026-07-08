@@ -3,9 +3,9 @@ This example is a demo to launch s3rver with the start of serverless-offline.
 
 ## Start server
 ```
-$ cd serverless-s3-local
+$ cd examples/simple-put
 $ yarn install
-$ yarn workspace simple-put run start
+$ yarn start
 ```
 
 ## Send a request

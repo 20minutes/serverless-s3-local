@@ -1,13 +1,12 @@
-name: CI
+name: Node Publish
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  release:
+    types:
+      - created
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -18,9 +17,12 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: 'yarn'
+          registry-url: https://registry.npmjs.org/
 
       - run: yarn install --frozen-lockfile
 
-      - run: yarn lint:ci
-
       - run: yarn test
+
+      - run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
