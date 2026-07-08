@@ -1,0 +1,14 @@
+{
+  "name": "resize-image",
+  "version": "1.0.0",
+  "private": true,
+  "main": "handler.js",
+  "scripts": {
+    "start": "serverless offline --host 0.0.0.0 start"
+  },
+  "dependencies": {
+    "@20minutes/serverless-s3-local": "file:../..",
+    "sharp": "0.32.6"
+  },
+  "type": "module"
+}
