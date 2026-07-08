@@ -44,6 +44,21 @@
     "@smithy/types" "^4.15.1"
     tslib "^2.6.2"
 
+"@aws-sdk/client-api-gateway@^3.588.0":
+  version "3.1081.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-api-gateway/-/client-api-gateway-3.1081.0.tgz#ef8273a1dac330952c7be96e8363f40c28785bc0"
+  integrity sha512-uKUrTUNc0VaVMslK/vJ6qg4LBnynHnvb9pu7gLtFe06+g4rT2IseJWed6xrdfa0t8iSW00rrLoTVbHNEukjETg==
+  dependencies:
+    "@aws-sdk/core" "^3.974.29"
+    "@aws-sdk/credential-provider-node" "^3.972.64"
+    "@aws-sdk/middleware-sdk-api-gateway" "^3.972.21"
+    "@aws-sdk/types" "^3.973.15"
+    "@smithy/core" "^3.29.0"
+    "@smithy/fetch-http-handler" "^5.6.2"
+    "@smithy/node-http-handler" "^4.9.2"
+    "@smithy/types" "^4.15.1"
+    tslib "^2.6.2"
+
 "@aws-sdk/client-cloudformation@^3.410.0":
   version "3.1081.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-cloudformation/-/client-cloudformation-3.1081.0.tgz#8d3cfdf53b1056345316dbb66edfaba7d7ab74e5"
@@ -58,7 +73,50 @@
     "@smithy/types" "^4.15.1"
     tslib "^2.6.2"
 
-"@aws-sdk/client-lambda@^3.636.0":
+"@aws-sdk/client-cognito-identity-provider@^3.588.0":
+  version "3.1081.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-cognito-identity-provider/-/client-cognito-identity-provider-3.1081.0.tgz#1fe29e287da9d15787b1dd7bda486762f6e1fcb2"
+  integrity sha512-uBvMQ2gLiNphTjmZKHz0WAq4mESC9OCngmzE4FJSVnm6bjUZMWSBU4rJCEjYh/gzZ5BLRk1TV1BzTdMuU78kFQ==
+  dependencies:
+    "@aws-sdk/core" "^3.974.29"
+    "@aws-sdk/credential-provider-node" "^3.972.64"
+    "@aws-sdk/types" "^3.973.15"
+    "@smithy/core" "^3.29.0"
+    "@smithy/fetch-http-handler" "^5.6.2"
+    "@smithy/node-http-handler" "^4.9.2"
+    "@smithy/types" "^4.15.1"
+    tslib "^2.6.2"
+
+"@aws-sdk/client-eventbridge@^3.588.0":
+  version "3.1081.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-eventbridge/-/client-eventbridge-3.1081.0.tgz#ad21928cee65a25bffd46008b308ea12f342d881"
+  integrity sha512-yfApvz19TIF27sZqnhYr/jGbMF2sg4r0L2HEbKzM+KqLFdqE8um/IDBgbEL++WDr4qtGIRL9OodoyFKbhAfNyg==
+  dependencies:
+    "@aws-sdk/core" "^3.974.29"
+    "@aws-sdk/credential-provider-node" "^3.972.64"
+    "@aws-sdk/signature-v4-multi-region" "^3.996.38"
+    "@aws-sdk/types" "^3.973.15"
+    "@smithy/core" "^3.29.0"
+    "@smithy/fetch-http-handler" "^5.6.2"
+    "@smithy/node-http-handler" "^4.9.2"
+    "@smithy/types" "^4.15.1"
+    tslib "^2.6.2"
+
+"@aws-sdk/client-iam@^3.588.0":
+  version "3.1081.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-iam/-/client-iam-3.1081.0.tgz#74273b5e9dbfb8bd17c5778a20654726ebef6c95"
+  integrity sha512-PR9jz6r6+inwSHrdwI9O4Vgolkd6+lTQ+H+YS2s4uyC2J8FGUDMCJO40ycszcvy8o8EWwFS/ACA/HotY+OAHLQ==
+  dependencies:
+    "@aws-sdk/core" "^3.974.29"
+    "@aws-sdk/credential-provider-node" "^3.972.64"
+    "@aws-sdk/types" "^3.973.15"
+    "@smithy/core" "^3.29.0"
+    "@smithy/fetch-http-handler" "^5.6.2"
+    "@smithy/node-http-handler" "^4.9.2"
+    "@smithy/types" "^4.15.1"
+    tslib "^2.6.2"
+
+"@aws-sdk/client-lambda@^3.588.0", "@aws-sdk/client-lambda@^3.636.0":
   version "3.1081.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-lambda/-/client-lambda-3.1081.0.tgz#eed0c8ac8bb51fc1fad355cfdf33c62e9a4db2af"
   integrity sha512-DlFiHPVHQsGz+2Zyli25tA4SQW1xPggko/lZMCsFwxzXeTyoW4X+EHkcRul1K7Z/Rf2zpGnwZWS+PWZYTFRaSw==
@@ -72,7 +130,7 @@
     "@smithy/types" "^4.15.1"
     tslib "^2.6.2"
 
-"@aws-sdk/client-s3@^3.1081.0":
+"@aws-sdk/client-s3@^3.1081.0", "@aws-sdk/client-s3@^3.588.0":
   version "3.1081.0"
   resolved "https://registry.yarnpkg.com/@aws-sdk/client-s3/-/client-s3-3.1081.0.tgz#4ffd8515b6ff6a51573b34e98e506a187948b4e1"
   integrity sha512-mHAdLBibsbFwcW2YHrH5sIQlaXjB3zha7Nkooa2gqTlXxRpVJ+ba/v/mg19B6rJeZmOEteRHFz+INOlAbCbxJg==
@@ -221,6 +279,16 @@
   dependencies:
     "@aws-sdk/core" "^3.974.29"
     "@aws-sdk/nested-clients" "^3.997.29"
+    "@aws-sdk/types" "^3.973.15"
+    "@smithy/core" "^3.29.0"
+    "@smithy/types" "^4.15.1"
+    tslib "^2.6.2"
+
+"@aws-sdk/middleware-sdk-api-gateway@^3.972.21":
+  version "3.972.21"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/middleware-sdk-api-gateway/-/middleware-sdk-api-gateway-3.972.21.tgz#69e7c2f4f8eed8257217f17fa71babd7faf7a892"
+  integrity sha512-tlu8JAcbrhh4jnoQXczWQ2QIOaev3ZdVBdU4RRaNBfJmVyuBbMKdh6mdrunEdSFgm2GlJW1lIhE4BHTL0A55dw==
+  dependencies:
     "@aws-sdk/types" "^3.973.15"
     "@smithy/core" "^3.29.0"
     "@smithy/types" "^4.15.1"
@@ -824,7 +892,7 @@
   resolved "https://registry.yarnpkg.com/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz#e3fcee093fbb5ce765e1ad088ff4de2889f6f9be"
   integrity sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==
 
-"@serverless/dashboard-plugin@^7.0.2":
+"@serverless/dashboard-plugin@^7.2.0":
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/@serverless/dashboard-plugin/-/dashboard-plugin-7.2.3.tgz#ea2a312de2c4e763f4365654f8dfb8720bda52bb"
   integrity sha512-Vu4TKJLEQ5F8ZipfCvd8A/LMIdH8kNGe448sX9mT4/Z0JVUaYmMc3BwkQ+zkNIh3QdBKAhocGn45TYjHV6uPWQ==
@@ -861,7 +929,7 @@
     "@types/lodash" "^4.14.123"
     lodash "^4.17.11"
 
-"@serverless/platform-client@^4.4.0", "@serverless/platform-client@^4.5.1":
+"@serverless/platform-client@^4.5.1":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@serverless/platform-client/-/platform-client-4.5.1.tgz#db5915bb53339761e704cc3f7d352c7754a79af2"
   integrity sha512-XltmO/029X76zi0LUFmhsnanhE2wnqH1xf+WBt5K8gumQA9LnrfwLgPxj+VA+mm6wQhy+PCp7H5SS0ZPu7F2Cw==
@@ -4638,13 +4706,19 @@ serverless-offline@^13.0.0:
     velocityjs "^2.0.6"
     ws "^8.18.0"
 
-serverless@3.35.2:
-  version "3.35.2"
-  resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.35.2.tgz#8f0e24ba0814ffb9a3a5937fbd3dbea9802f44be"
-  integrity sha512-1RZ4eHl2OaGG2Rzw0l0ZD3byCk2JMCL9/+btzGQGQruuQWu9HwRZGJI7l4A2ghW3Mu6DVwLYLfceNpmEWBZoag==
+serverless@3.40.0:
+  version "3.40.0"
+  resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.40.0.tgz#bf0e15caae556497d6a97afdc4b2e0ee84c43043"
+  integrity sha512-6vUSIUqBkhZeIpFz0howqKlT1BNjYxOrucvvSICKCEsxVS9MbTJokGkykDrpr/k4Io3WI8tcvrf25+U5Ynf3lw==
   dependencies:
-    "@serverless/dashboard-plugin" "^7.0.2"
-    "@serverless/platform-client" "^4.4.0"
+    "@aws-sdk/client-api-gateway" "^3.588.0"
+    "@aws-sdk/client-cognito-identity-provider" "^3.588.0"
+    "@aws-sdk/client-eventbridge" "^3.588.0"
+    "@aws-sdk/client-iam" "^3.588.0"
+    "@aws-sdk/client-lambda" "^3.588.0"
+    "@aws-sdk/client-s3" "^3.588.0"
+    "@serverless/dashboard-plugin" "^7.2.0"
+    "@serverless/platform-client" "^4.5.1"
     "@serverless/utils" "^6.13.1"
     abort-controller "^3.0.0"
     ajv "^8.12.0"
